@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-@Component({
+@Component ({
   selector: 'mw-category-list',
   template: `
     <span class="label" *ngFor="let category of categories">
@@ -9,6 +9,16 @@ import { Component, Input } from '@angular/core';
   `,
   styles: [
     `
+      :host {
+        display: block;
+        margin-bottom: 20px;
+      }
+      :host-context(.medium-movies) span {
+        background-color: #53ace4;
+      }
+      :host-context(.medium-series) span {
+        background-color: #45bf94;
+      }
       .label {
         background-color: #999999;
         color: #ffffff;
